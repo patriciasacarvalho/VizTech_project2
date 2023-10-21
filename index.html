@@ -17,7 +17,7 @@
         }
 
         .link {
-            background-color: #b85042;
+            background-color: #b85042; /* The background color section extending from the link to the paragraph - We're thrilled to have... */
             padding: 20px;
         }
 
@@ -28,9 +28,10 @@
         }
 
         .intro {
-            background-color: #E7E8D1; 
+            background-color: #E7E8D1; /* The background color section extending from NEU logo to the paragraph - We're thrilled to have... */
+            padding: 0px;
             border-radius: 10px;
-            margin: 50px; 
+            margin: 40px 110px; 
             padding: auto; 
             display: grid;
             grid-template-columns: 1fr 2fr;
@@ -42,6 +43,28 @@
 
         }
 
+        /* Centered content wrapper */
+        .centered-content {
+            display: flex;
+            flex-direction: column;
+            align-items: center; /* Center horizontally */
+            text-align: left;
+            max-width: 100%;
+            margin: 30px auto; /* Center horizontally within the grid */
+            padding: 0 20px; /* Optional padding for spacing */
+        }
+
+        /* Adjust the alignment for the NEU logo image */
+        .centered-content img.neu-logo {
+            align-self: flex-start; /* Align to the left within the centered content wrapper */
+        }
+
+        /* Adjust margin for text in the right grid */
+        .right-grid h1,
+        .right-grid p {
+            margin-right: 40px; /* Add more margin on the right */
+        }
+
         .matters {
             background-color: #b85042;
             padding: 20px;
@@ -49,18 +72,32 @@
         .why {
             background-color: #E7E8D1; 
             border-radius: 5px;
-            margin: 60px; 
+            margin: 40px 110px; 
             padding: 60px; 
             display: grid;
             grid-template-columns: 2fr 1fr;
             gap: 100px; 
-    }
+         }
 
         .dani{
             margin: 110px;
             display: grid;
             grid-template-columns: 1fr 1fr;
-            gap: 150px; 
+            gap: 80px; 
+        }
+
+        .neu_ghg{
+            margin: 110px;
+            display: grid;
+            grid-template-columns: 1.5fr 1fr;
+            gap: 100px; 
+        }
+
+        .neu_ghg_s{
+            margin: 110px;
+            display: grid;
+            grid-template-columns: 1fr 1.5fr;
+            gap: 100px; 
         }
 
         h1, h2 {
@@ -77,7 +114,16 @@
             font-family: 'Lato', sans-serif;
             font-size: 16px;
         }
+
+        .caption { /* an explanation or caption under a plot */
+        font-family: Lato, sans-serif;
+        font-size: 14px; 
+        color: #676766; 
+        text-align: center; /* Align the text in the center */
+        margin-top: 5px;
+        }
     </style>
+
 </head>
 <body>
     <div class="link">
@@ -89,15 +135,21 @@
         </nav>
     
 
-    <div class="intro">
-        <div class="left-grid"> 
-            <img src="image/b_students.png" alt="NEU Students" style="max-width: 130%; position: relative; top: -60px; bottom: -60px; margin-left: -10%;">
+        <div class="intro">
+            <div class="left-grid">
+                <div class="centered-content"> <!-- Centered content wrapper -->
+                    <img src="image/b_students.png" alt="NEU Students" style="max-width: 120%; margin-left: -5%;">
+                </div>
+            </div>
+            <div class="right-grid">
+                <div class="centered-content"> <!-- Centered content wrapper -->
+                    <img src="image/NEU_logo.png" alt="NEU Logo" class="neu-logo" style="max-width: 30%; margin-bottom: 20px;">
+                    <h1 style="margin: 0; padding: 0;">Welcome to Northeastern University in the Heart of Boston!</h1>
+                    <p>We're thrilled to have you join us on this exciting journey. Boston is not only a city steeped in history but also a place deeply committed to sustainability. Here at Northeastern, sustainability is more than a concept; it's a way of life. From eco-friendly campus initiatives to green clubs and daily sustainable habits, you'll find plenty of opportunities to be part of our commitment to a greener future. Welcome to a university where your education includes making a positive impact on the world around you.</p>
+                </div>
+            </div>
         </div>
-        <div class="right-grid">
-            <img src="image/NEU_logo.png" alt="NEU Logo" style="max-width: 30%;">
-            <h1 style="margin: 0; padding: 0;">Welcome to Northeastern University in the Heart of Boston!</h1>
-            <p> We're thrilled to have you join us on this exciting journey. Boston is not only a city steeped in history but also a place deeply committed to sustainability. Here at Northeastern, sustainability is more than a concept; it's a way of life. From eco-friendly campus initiatives to green clubs and daily sustainable habits, you'll find plenty of opportunities to be part of our commitment to a greener future. Welcome to a university where your education includes making a positive impact on the world around you.</p>
-    </div>
+        
         
         
     </div>
@@ -134,7 +186,7 @@
 <div class = "why">
     <div class="left-grid">
     <h3> Why does this matter?</h3>
-    <p>hiiiiiii From the coffee you drink to the choices you make about meals, waste, energy, and transportation, every aspect of your daily life as a student can be a meaningful step towards sustainability. Your coffee can support ethically sourced beans, your meals can back local, sustainable agriculture, and waste reduction becomes a commitment to recycling and reusable products. Conserving energy becomes second nature in your dorm, and you'll find eco-friendly transportation options like walking and biking at your fingertips. Your daily actions aren't just routines; they're opportunities to shape a more sustainable campus and a brighter future for our planet.</p>
+    <p>From the coffee you drink to the choices you make about meals, waste, energy, and transportation, every aspect of your daily life as a student can be a meaningful step towards sustainability. Your coffee can support ethically sourced beans, your meals can back local, sustainable agriculture, and waste reduction becomes a commitment to recycling and reusable products. Conserving energy becomes second nature in your dorm, and you'll find eco-friendly transportation options like walking and biking at your fingertips. Your daily actions aren't just routines; they're opportunities to shape a more sustainable campus and a brighter future for our planet.</p>
     </div>
 
     <div class="right-grid">
@@ -196,20 +248,35 @@
 </div>
 
 <!-- DANIELA-->
-
-<div class = "dani">
-    <!-- DANI - University Emissions-->
+ <!-- DANI - University Emissions -->
+<div class="neu_ghg">
     <div class="left-grid">
-        <h3> University Emissions</h3>
-        <p> This graph presents an overview of greenhouse gas emissions at the Boston campus of Northeastern University from 2005 to 2022. Beyond the general GHG summary, the graph further breaks down emissions by individual gases (CO2, CH4, N2O), allowing viewers to discern the contribution of each gas to the total emissions over the years. </p>
-        <img src="image/neu_ma_ghg.png" alt="NEU Boston campus GHG" style="max-width: 100%;">
+        <h3>Exploring Greenhouse Gas Emissions at Northeastern University (2005-2022)</h3>
+        <p>Take a moment to explore this graph, which offers valuable insights into the greenhouse gas emissions at Northeastern University's Boston campus. It covers a significant timeframe, spanning from 2005 to 2022.<br>At first glance, you'll notice a gradual reduction in overall greenhouse gas emissions during this period, with a few gentle fluctuations along the way. This initial observation hints at the broader environmental story we're about to uncover.<br>As we delve deeper into the data, we've separated these emissions into their fundamental components: carbon dioxide (CO2), methane (CH4), and nitrous oxide (N2O). This separation reveals the distinct roles played by each gas in the overall emissions, providing a more intricate and comprehensive understanding of our environmental impact.<br>
+            One particularly intriguing finding is the 'spike' in methane (CH4) emissions that occurred during 2014-2015, marking a temporary peak in the release of this specific gas. This unique insight sheds light on the dynamic nature of our campus's environmental footprint.</p>
     </div>
-    <!-- DANI - Sources of GHG Emissions-->
+    
     <div class="right-grid">
-    <h3> Sources of GHG Emissions (2005 - 2022)</h3>
-    <p>After providing a broad view of the campus's GHG emissions, this chart delves deeper to highlight the specific sources of these gases. Emission sources are segmented into three categories: on-campus stationary activities, direct transportation, and externally purchased electricity. </p>
-    <img src="image/neu_ghg_source.png" alt="GHG Source at NEU Boston Campus" style="max-width: 100%;">
+        <img src="image/neu_ghg.png" alt="NEU Boston campus GHG" style="max-width: 100%;">
+    </div>
 </div>
+
+<!-- DANI - Sources of GHG Emissions -->
+<div class="neu_ghg_s">
+    <div class="left-grid">
+        <!-- Embed the Sankey diagram using an iframe -->
+        <iframe src="sankey.html" width="600" height="500" frameborder="0"></iframe>
+        <div class="caption">
+            <p> Left side: emission sources; Right side: greenhouse gases: CO2, CH4, and N2O.</p>
+        </div>
+    </div>
+    
+    <div class="right-grid">
+        <h3>Unveiling the Origins: Greenhouse Gas Emission Sources at Our Campus</h3>
+        <p>After giving you a wide-angle perspective of our campus's greenhouse gas emissions, this chart takes a closer look. It shines a spotlight on the origins of these gases, including carbon dioxide (CO2), methane (CH4), and nitrous oxide (N2O). We've sorted emission sources into three distinct categories: on-campus stationary activities, direct transportation, and externally purchased electricity.<br>On the chart's left side, you'll find the sources of these emissions, while the right side breaks down the types of gases involved. A notable observation is that on-campus stationary activities and externally purchased electricity are the primary contributors to CO2 emissions.</p>
+    </div>
+</div>
+
 
 
 <!-- 
