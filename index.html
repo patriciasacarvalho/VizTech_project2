@@ -43,6 +43,12 @@
 
         }
 
+        .boston {
+            background-color: #b85042;
+            padding: 50px 120px 50px 120px;
+            margin: 20px 0px 20px 0px;
+        }
+
         /* Centered content wrapper */
         .centered-content {
             display: flex;
@@ -94,7 +100,7 @@
             margin: 110px;
             display: grid;
             grid-template-columns: 1.5fr 1fr;
-            gap: 100px; 
+            gap: 20px; 
         }
 
 
@@ -132,15 +138,14 @@
             font-family: 'Playfair Display', serif;
             font-style: normal;
             font-weight: 600;
-            font-size: 36px;
+            font-size: 44px;
         }
         h2 {
             color: #333;
             font-family: 'Lato', sans-serif;
             font-style: normal;
             font-weight: 600;
-            text-align: left;
-            font-size: 28px;
+            font-size: 26px;
         }
     
         h3 {
@@ -150,26 +155,77 @@
             font-weight: 600;
             font-size: 26px;
         }
+
+        /*.caption { 
+        font-family: Lato, sans-serif;
+        font-size: 14px; 
+        color: #99999A; 
+        text-align: left; 
+        margin-top: 0px;
+        } */
+
         p{
             color: #333;
             font-family: 'Lato', sans-serif;
             font-style: normal;
-            font-size: 18px;
+            font-size: 17px;
+            line-height: 1.7;
         }
 
-        .caption { /* an explanation or caption under a plot */
-        font-family: Lato, sans-serif;
-        font-size: 13px; 
-        color: #99999A; 
-        text-align: left; /* Align the text in the center */
-        margin-top: 0px;
+        
+
+        /* Read more button */
+        /* Read more button */
+        .readMoreBtn {
+            background-color: #E7E8D1; /* Light greenish background */
+            color: #333;              /* Dark text color */
+            font-size: 14px;
+            border-radius: 5px;       /* Rounded corners */
+            border: none;             /* Remove default border */
+            padding: 8px 16px;        /* Add some padding */
+            transition: all 0.3s;     /* Smooth transition for hover effects */
         }
+
+        .readMoreBtn:hover {
+            background-color: #D1D3C4; /* Slightly darker shade for hover */
+            color: #222;              /* Slightly darker text color on hover */
+            box-shadow: none;         /* Remove any shadow effect */
+        }
+
+        .readMoreBtn:active {
+            background-color: #C4C6B7; /* Even darker for the active state */
+            box-shadow: none;         /* Remove any shadow effect */
+        }
+
+        .readMoreBtn:focus {
+            outline: none;            /* Remove the focus outline */
+            box-shadow: none;         /* Remove any shadow effect */
+        }
+
 
         
     </style>
 
 </head>
 <body>
+    <!-- JavaScript -->
+    <script>
+    function toggleReadMore(moreContentId, btnId) {
+    var moreText = document.getElementById(moreContentId);
+    var btnText = document.getElementById(btnId);
+
+    if (moreText.style.display === "none" || moreText.style.display === "") {
+        moreText.style.display = "inline";
+        btnText.textContent = "Show Less";
+    } else {
+        moreText.style.display = "none";
+        btnText.textContent = "Read More";
+    }
+}
+
+
+    </script>
+
     <div class="link">
         <nav>
             <a href="info.html">Info</a> |
@@ -182,14 +238,14 @@
         <div class="intro">
             <div class="left-grid">
                 <div class="centered-content"> <!-- Centered content wrapper -->
-                    <img src="image/b_students.png" alt="NEU Students" style="max-width: 120%; margin-left: -5%;">
+                    <img src="image/b_students.png" alt="NEU Students" style="max-width: 110%; margin-left: -5%;">
                 </div>
             </div>
-            <div class="right-grid">
+            <div class="right-grid" style="margin-top:30px; margin-left: -5%;">
                 <div class="centered-content"> <!-- Centered content wrapper -->
                     <img src="image/NEU_logo.png" alt="NEU Logo" class="neu-logo" style="max-width: 30%; margin-bottom: 20px;">
                     <h1 style="margin: 0; padding: 0;">Welcome to Northeastern University in the Heart of Boston!</h1>
-                    <p>We're thrilled to have you join us on this exciting journey. Boston is not only a city steeped in history but also a place deeply committed to sustainability. Here at Northeastern, sustainability is more than a concept; it's a way of life. From eco-friendly campus initiatives to green clubs and daily sustainable habits, you'll find plenty of opportunities to be part of our commitment to a greener future. Welcome to a university where your education includes making a positive impact on the world around you.</p>
+                    <p style="margin-top: 60px;">We're thrilled to have you join us on this exciting journey. Boston is not only a city steeped in history but also a place deeply committed to sustainability. Here at Northeastern, sustainability is more than a concept; it's a way of life. From eco-friendly campus initiatives to green clubs and daily sustainable habits, you'll find plenty of opportunities to be part of our commitment to a greener future. Welcome to a university where your education includes making a positive impact on the world around you.</p>
                 </div>
             </div>
         </div>
@@ -200,31 +256,36 @@
 </div>
 
 <!-- PATRICIA-->
-<div class = "dani">
+<div class = "boston">
+<img src="image/boston_banner.png" alt="Boston City" style=" padding:0px; margin: 0px; border: 15px solid #E7E8D1; border-radius: 10px;">
+</div>
+
+<div class = "dani" >
     <div class="left-grid">
-    <h3 style="margin: 0; padding: 0;">Welcome to Boston</h3>
-    <p>The City of Boston is committed to combating climate change through various initiatives, including energy-efficient building codes, improved public transportation, and renewable energy adoption, with a goal of achieving carbon neutrality by 2050. In 2018, the city's emissions from buildings and transportation increased by 4%, reaching 6.4 million metric tons of greenhouse gases. This rise was driven by higher electricity and natural gas use, as well as a 9% increase in vehicle miles traveled. <br> <br> Despite this increase, Boston has achieved significant emissions reductions. In 2018, emissions were 20% lower than in 2005 with renewable energy credits (RECs) and 19% lower without RECs. Local government operations reduced emissions by 37% compared to 2005 with RECs and 30% without RECs. Boston achieved its 2020 goal of cutting municipal emissions 25% below 2005 levels in 2015, five years ahead of schedule. Notably, as the city's population and job opportunities grew, emissions per resident decreased by 39%, from 15 to 9 metric tons per year. Boston's economic growth, measured by Gross City Product (GCP), increased from 106 billion dollars to 129 billion, with emissions per million dollars of GCP decreasing by 35%, from 76 to 49 metric tons per million dollars.</p>
-    </div>
+        <h3>Welcome to Boston</h3>
+        <p>The City of Boston is committed to combating climate change through various initiatives, including energy-efficient building codes, improved public transportation, and renewable energy adoption, with a goal of achieving carbon neutrality by 2050. In 2018, the city's emissions from buildings and transportation increased by 4%, reaching 6.4 million metric tons of greenhouse gases. This rise was driven by higher electricity and natural gas use, as well as a 9% increase in vehicle miles traveled. 
+            <span id="moreContent1" style="display: none;"> <br>Despite this increase, Boston has achieved significant emissions reductions. In 2018, emissions were 20% lower than in 2005 with renewable energy credits (RECs) and 19% lower without RECs. Local government operations reduced emissions by 37% compared to 2005 with RECs and 30% without RECs. Boston achieved its 2020 goal of cutting municipal emissions 25% below 2005 levels in 2015, five years ahead of schedule. Notably, as the city's population and job opportunities grew, emissions per resident decreased by 39%, from 15 to 9 metric tons per year. Boston's economic growth, measured by Gross City Product (GCP), increased from 106 billion dollars to 129 billion, with emissions per million dollars of GCP decreasing by 35%, from 76 to 49 metric tons per million dollars.</span></p>
+            <button id="readMoreBtn1"  class="readMoreBtn" onclick="toggleReadMore('moreContent1', 'readMoreBtn1')">Read More</button>
+    </div>    
 
 <div class="right-grid">
-    <img src="image/Bcomm_em2@300x.png" alt="NEU Logo" style="max-width: 90%;">
+    <img src="image/Bcomm_em2@300x.png" alt="Boston Community GHG Emissions (mt CO2e)">
     <div class="caption">
-        <p style="margin-top: 10px; color:8F8F8F;"> Boston Community  GHG Emissions (mt CO2e)</p> 
+        <p style="font-size: 14px;"> Boston Community GHG Emissions (mt CO2e)</p> 
     </div>
     </div>
 </div>
 
-<div class = "dani_2" style="margin-top: -50px;">
+<div class = "dani_2">
     <div class="left-grid">
-        <img src="image/Emissions_GHG_per_capita2@300x.png" alt="NEU Logo" style="max-width: 80%;"> 
+        <img src="image/Emissions_GHG_per_capita2@300x.png" alt="Boston Emissions per Capita" style="max-width: 80%"> 
     <div class="caption">
-        <p style="margin-top: 10px; color:8F8F8F;"> Boston Emisions Per Capita</p>   
+        <p style="font-size: 14px;">Boston Emissions per Capita</p>   
     </div>
     </div>
 
-    <div class="right-grid">
-        
-    <img src="image/did_you_know_1@300x.png" alt="NEU Logo" style="max-width: 100%;">
+    <div class="right-grid" style="margin-top:10%;">    
+    <img src="image/did_you_know_1@300x.png" alt="Did You Know" style="max-width: 100%;">
     </div>
     </div>
 </div>
@@ -233,13 +294,15 @@
 <div class = "dani">
     <div class="left-grid">
         <h3>Boston and Northeastern Population Annual Percent Change</h3>
-        <p>Over the past eight years, the annual changes in undergraduate and graduate enrollment, along with the population growth in Boston, have painted an interesting picture. In terms of undergraduate enrollment, there has been a consistent but somewhat modest increase for both men and women, with men seeing a slightly higher percentage change. Graduate enrollment, on the other hand, has been more volatile, with significant fluctuations in both men and women categories. Notably, 2021 marked a remarkable surge in graduate women enrollment, with a staggering 72.77% increase. Meanwhile, the Boston population has been steadily growing at a relatively stable rate. These data points reflect the dynamic nature of education and population trends in Boston over this period, with potential implications for the city's academic institutions and social landscape.</p>
+        <p>Over the past eight years, the annual changes in undergraduate and graduate enrollment, along with the population growth in Boston, have painted an interesting picture.
+             <span id="moreContent2" style="display: none;"> <br> In terms of undergraduate enrollment, there has been a consistent but somewhat modest increase for both men and women, with men seeing a slightly higher percentage change. Graduate enrollment, on the other hand, has been more volatile, with significant fluctuations in both men and women categories. Notably, 2021 marked a remarkable surge in graduate women enrollment, with a staggering 72.77% increase. Meanwhile, the Boston population has been steadily growing at a relatively stable rate. These data points reflect the dynamic nature of education and population trends in Boston over this period, with potential implications for the city's academic institutions and social landscape.</span></p>
+             <button id="readMoreBtn2"  class="readMoreBtn" onclick="toggleReadMore('moreContent2', 'readMoreBtn2')">Read More</button>
     </div>
 
     <div class="right-grid">
-        <img src="image/pop_change_3@300x.png" alt="NEU Logo" style="max-width: 90%;">
+        <img src="image/pop_change_3@300x.png" alt="Northeastern Population Annual Percent Chang">
         <div class="caption">
-            <p style="margin-top: 10px; color:8F8F8F;"> Northeastern Population Annual Percent Change</p>  
+            <p style="font-size: 14px;"> Northeastern Population Annual Percent Change</p>  
         </div>
     </div>
 </div>
@@ -267,28 +330,31 @@
 
 <!-- AASHITA Total Co2 Emiisions-->
 
-
 <div class = "neu_ghg">
     <div class="left-grid">
-        <h2 style="margin: 0; padding: 0;">Emmisions at Northeastern University </h2>
-        <!-- Embed the Sankey diagram using an iframe -->
+        <h3>Emmisions at Northeastern University </h3>
+        <!-- Embed the diagram using an iframe -->
         <iframe src="aj.html" width="600" height="500" frameborder="0"></iframe>
     </div>
 
     <div class="right-grid">
-       <p>Emmisions from 2005 to 2022: The scatter plot depicts the total CO2 emissions for a campus over the years 2005 to 2022. Each point on the plot represents the total CO2 emissions for a specific year.The y-axis shows the total CO2 emissions, and the x-axis represents the years. As the years progress from left to right, the plot illustrates a clear decline in emissions, demonstrating the campus's commitment to reducing its carbon footprint. Overall, the graph provides a visual representation of the reduction in CO2 emissions over the years, signaling an environmentally responsible approach and a move toward sustainability. </p>
+       <p style="margin-top: 12%;"> <b>Emmisions from 2005 to 2022:</b> <br>The scatter plot depicts the total CO2 emissions for a campus over the years 2005 to 2022. Each point on the plot represents the total CO2 emissions for a specific year. The y-axis shows the total CO2 emissions, and the x-axis represents the years. <br> As the years progress from left to right, the plot illustrates a clear decline in emissions, demonstrating the campus's commitment to reducing its carbon footprint. Overall, the graph provides a visual representation of the reduction in CO2 emissions over the years, signaling an environmentally responsible approach and a move toward sustainability. </p>
     </div>
 </div>
+
+
 <!-- AASHITA Northeastern's Buildings We Know and Love-->
 
 <div class="neu_ghg_s">
-    <div class="left-grid" style="margin-top: 80px;">
-         <h2 style="margin: 0; padding: 0;">Building with highest CO2 Emissions</h2>
-         <p>The graph represents building emission values for a campus, displaying the environmental impact of various campus buildings in terms of their KgCO2e rates. The radial plot provides a visual overview of these emissions, where each bar corresponds to a building, and the height of the bar represents the KgCO2e rate. The graph highlights the buildings with the highest emissions by labeling the top five buildings with the darkest colors, making them easily identifiable. This visual emphasis draws attention to the specific buildings that have the greatest impact on emissions within the campus. Overall, this graph allows viewers to quickly identify the buildings with the highest emission values, making it a useful tool for assessing and addressing environmental concerns within the campus infrastructure.</p>
+    <div class="left-grid">
+        <h3>Building with highest CO2 Emissions</h3>
+        <p>The graph represents building emission values for a campus, displaying the environmental impact of various campus buildings in terms of their KgCO2e rates.<br> The radial plot provides a visual overview of these emissions, where each bar corresponds to a building, and the height of the bar represents the KgCO2e rate.
+            <span id="moreContent3" style="display: none;"> <br> The graph highlights the buildings with the highest emissions by labeling the top five buildings with the darkest colors, making them easily identifiable. This visual emphasis draws attention to the specific buildings that have the greatest impact on emissions within the campus. Overall, this graph allows viewers to quickly identify the buildings with the highest emission values, making it a useful tool for assessing and addressing environmental concerns within the campus infrastructure. </span></p>
+            <button id="readMoreBtn3"  class="readMoreBtn" onclick="toggleReadMore('moreContent3', 'readMoreBtn3')">Read More</button>
      </div>
 
      <div class="right-grid">
-         <img src="image/Building emmision.jpeg" alt="NEU Logo" style="max-width: 100%;">
+         <img src="image/Building emmision.jpeg" alt="Building Emissions" style="margin-top: -50px;">
     </div>
 </div>
 
@@ -296,11 +362,13 @@
  <!-- DANI - University Emissions -->
 <div class="neu_ghg">
     <div class="left-grid">
-        <h3>Exploring Greenhouse Gas Emissions at Northeastern University (2005-2022)</h3>
-        <p>Take a moment to explore this graph, which offers valuable insights into the greenhouse gas emissions at Northeastern University's Boston campus. It covers a significant timeframe, spanning from 2005 to 2022.<br>At first glance, you'll notice a gradual reduction in overall greenhouse gas emissions during this period, with a few gentle fluctuations along the way. This initial observation hints at the broader environmental story we're about to uncover.<br>As we delve deeper into the data, we've separated these emissions into their fundamental components: carbon dioxide (CO2), methane (CH4), and nitrous oxide (N2O). This separation reveals the distinct roles played by each gas in the overall emissions, providing a more intricate and comprehensive understanding of our environmental impact.<br>
-            One particularly intriguing finding is the 'spike' in methane (CH4) emissions that occurred during 2014-2015, marking a temporary peak in the release of this specific gas. This unique insight sheds light on the dynamic nature of our campus's environmental footprint.</p>
+        <h3>Exploring Greenhouse Gas Emissions at Northeastern University (2005-T2022)</h3>
+        <p> Take a moment to explore this graph, which offers valuable insights into the greenhouse gas emissions at Northeastern University's Boston campus. It covers a significant timeframe, spanning from 2005 to 2022.
+            <span id="moreContent4" style="display: none;"> <br> At first glance, you'll notice a gradual reduction in overall greenhouse gas emissions during this period, with a few gentle fluctuations along the way. This initial observation hints at the broader environmental story we're about to uncover.
+                <br>As we delve deeper into the data, we've separated these emissions into their fundamental components: carbon dioxide (CO2), methane (CH4), and nitrous oxide (N2O). This separation reveals the distinct roles played by each gas in the overall emissions, providing a more intricate and comprehensive understanding of our environmental impact.
+                <br>One particularly intriguing finding is the 'spike' in methane (CH4) emissions that occurred during 2014-2015, marking a temporary peak in the release of this specific gas. This unique insight sheds light on the dynamic nature of our campus's environmental footprint. </span></p>
+            <button id="readMoreBtn4"  class="readMoreBtn" onclick="toggleReadMore('moreContent4', 'readMoreBtn4')">Read More</button>
     </div>
-    
     <div class="right-grid">
         <img src="image/neu_ghg.png" alt="NEU Boston campus GHG" style="max-width: 100%;">
     </div>
@@ -312,13 +380,15 @@
         <!-- Embed the Sankey diagram using an iframe -->
         <iframe src="sankey.html" width="800" height="600" frameborder="0"></iframe>
         <div class="caption">
-            <p style="color:8F8F8F;"> Left side: emission sources; Right side: greenhouse gases: CO2, CH4, and N2O.</p>
+            <p style="font-size: 14px;"> Left side: emission sources; Right side: greenhouse gases: CO2, CH4, and N2O.</p>
         </div>
     </div>
     
     <div class="right-grid">
         <h3>Unveiling the Origins: Greenhouse Gas Emission Sources at Our Campus</h3>
-        <p>After giving you a wide-angle perspective of our campus's greenhouse gas emissions, this chart takes a closer look. It shines a spotlight on the origins of these gases, including carbon dioxide (CO2), methane (CH4), and nitrous oxide (N2O). We've sorted emission sources into three distinct categories: on-campus stationary activities, direct transportation, and externally purchased electricity.<br>On the chart's left side, you'll find the sources of these emissions, while the right side breaks down the types of gases involved. A notable observation is that on-campus stationary activities and externally purchased electricity are the primary contributors to CO2 emissions.</p>
+        <p> After giving you a wide-angle perspective of our campus's greenhouse gas emissions, this chart takes a closer look. It shines a spotlight on the origins of these gases, including carbon dioxide (CO2), methane (CH4), and nitrous oxide (N2O). We've sorted emission sources into three distinct categories: on-campus stationary activities, direct transportation, and externally purchased electricity.
+            <span id="moreContent5" style="display: none;"> <br> On the chart's left side, you'll find the sources of these emissions, while the right side breaks down the types of gases involved. A notable observation is that on-campus stationary activities and externally purchased electricity are the primary contributors to CO2 emissions. </span></p>
+            <button id="readMoreBtn5"  class="readMoreBtn" onclick="toggleReadMore('moreContent5', 'readMoreBtn5')">Read More</button>
     </div>
 </div>
 
@@ -328,11 +398,11 @@
     <div class = "why">
         <div class="left-grid">
         <h3> Why Does This Matter?</h3>
-        <p>From the coffee you drink to the choices you make about meals, waste, energy, and transportation, every aspect of your daily life as a student can be a meaningful step towards sustainability. Your coffee can support ethically sourced beans, your meals can back local, sustainable agriculture, and waste reduction becomes a commitment to recycling and reusable products. Conserving energy becomes second nature in your dorm, and you'll find eco-friendly transportation options like walking and biking at your fingertips. Your daily actions aren't just routines; they're opportunities to shape a more sustainable campus and a brighter future for our planet.</p>
+        <p>From the coffee you drink to the choices you make about meals, waste, energy, and transportation, every aspect of your daily life as a student can be a meaningful step towards sustainability. Your coffee can support ethically sourced beans, your meals can back local, sustainable agriculture, and waste reduction becomes a commitment to recycling and reusable products.<br> Conserving energy becomes second nature in your dorm, and you'll find eco-friendly transportation options like walking and biking at your fingertips. Your daily actions aren't just routines; they're opportunities to shape a more sustainable campus and a brighter future for our planet.</p>
     </div>
     
         <div class="right-grid">
-            <img src="image/coffee_neu@300x.png" alt="NEU Logo" style="max-width: 130%; margin-left: -50px;">
+            <img src="image/coffee_neu@300x.png" alt="NEU Logo" style="max-width: 120%; margin-left: -30px;">
         </div>
         </div>
     </div>
@@ -346,12 +416,12 @@
 <div class="fuel" style="margin-top: 200px;"> 
     <div class="left-grid">
         <img src="image/Campus_Emissions_vs_Inventory2@300x.png" alt="NEU Logo" style = "margin-right: 0; margin-left: 0; margin-top: -130; max-width: 110%;">
-        <p class="image-caption" style="font-size: 13px; color:8F8F8F; margin-left: 30; margin-top: 0;">Northeastern Campus GHG Emissions</p>
+        <p style="font-size: 14px;">Northeastern Campus GHG Emissions</p>
     </div>
 
     <div class="right-grid"> 
         <img src="image/RealEstate_Emissions_vs_Inventory2@300x.png" alt="NEU Logo" style = "margin-left: 0; margin-top: -130; max-width: 110%;">
-        <p class="image-caption" style="font-size: 13px; color:8F8F8F; margin-left: -30; margin-top: 0;">Northeastern's Real Estate GHG Emissions</p>
+        <p style="font-size: 14px; margin-left: 40px;">Northeastern's Real Estate GHG Emissions</p>
     </div>
 </div>
 
@@ -363,7 +433,9 @@
 
     <div class="right-grid">
         <h3> Northeastern's Fuel Consumption</h3>
-    <p>In a world increasingly concerned with the ecological footprint of our energy choices, the spotlight falls on the different energy sources that power institutions like Northeastern University. Gasoline, diesel, and electricity are the pillars of energy consumption, but they come with varying degrees of environmental impact. Gasoline's volatility and its association with air pollution and climate change have raised alarms. Diesel's fluctuating usage has prompted questions about its sustainability and emissions. On the brighter side, electricity's steady growth represents a beacon of cleaner energy hope. As we delve into Northeastern University's consumption trends over the past decade, we find insights that reflect a broader global trend toward more sustainable energy sources, holding significant relevance for informed policymaking.</p>
+        <p>In a world increasingly concerned with the ecological footprint of our energy choices, the spotlight falls on the different energy sources that power institutions like Northeastern University.
+        <span id="moreContent6" style="display: none;"> <br> Gasoline, diesel, and electricity are the pillars of energy consumption, but they come with varying degrees of environmental impact. Gasoline's volatility and its association with air pollution and climate change have raised alarms. Diesel's fluctuating usage has prompted questions about its sustainability and emissions. <br> On the brighter side, electricity's steady growth represents a beacon of cleaner energy hope. As we delve into Northeastern University's consumption trends over the past decade, we find insights that reflect a broader global trend toward more sustainable energy sources, holding significant relevance for informed policymaking. </span></p>
+            <button id="readMoreBtn6"  class="readMoreBtn" onclick="toggleReadMore('moreContent6', 'readMoreBtn6')">Read More</button>
     </div>
 </div>
 
@@ -375,11 +447,11 @@
     <div class = "why">
         <div class="left-grid">
         <h3> Role of Transportation in the Green Revolution</h3>
-        <p>Students at our university can play a vital role in promoting sustainability through their daily routines. By choosing eco-friendly transportation, opting for plant-based meals, reducing waste, conserving energy, embracing digital learning, and supporting secondhand shopping, they can make a significant impact. Mindful water usage, active participation in campus sustainability initiatives, and exploring green transportation options further enhance their contributions. Engaging in local sustainability projects extends their impact beyond campus, fostering a greener, more environmentally conscious community.</p>
+        <p>Students at our university can play a vital role in promoting sustainability through their daily routines. By choosing eco-friendly transportation, opting for plant-based meals, reducing waste, conserving energy, embracing digital learning, and supporting secondhand shopping, they can make a significant impact. <br>Mindful water usage, active participation in campus sustainability initiatives, and exploring green transportation options further enhance their contributions. Engaging in local sustainability projects extends their impact beyond campus, fostering a greener, more environmentally conscious community.</p>
     </div>
     
         <div class="right-grid">
-            <img src="image/bike_student.png" alt="NEU Logo" style="max-width: 150%; margin-left: -50px;">
+            <img src="image/bike_student.png" alt="NEU Logo" style="max-width: 130%; margin-left: -10px;">
         </div>
         </div>
     </div>
@@ -390,14 +462,16 @@
 
 <div class = "dani">
     <div class="left-grid">
-    <h3 style="margin: 0; padding: 0;">Commute and Transportation</h3>
-    <p>Alternative modes of transportation provide reduced commuting costs, reduced stress, improved health, and benefit the environment.  Boston campus transportation options include walking, biking, public transportation, electric vehicles, and carpooling.   Northeastern encourages alternative modes of transportation for convenient, healthy ways to lessen the environmental impact.<br>Northeastern University just took another step in establishing a pathway toward a more sustainable future, and facilities management at Northeastern is helping to pave that road. With the sole goal of accelerating the electrification of transportation within the city of Boston and beyond, Northeastern is determined to maintain its rank as one of the leading organizations in promoting energy advancement throughout the Commonwealth of Massachusetts.</p>
+    <h3>Commute and Transportation</h3>
+    <p> Alternative modes of transportation provide reduced commuting costs, reduced stress, improved health, and benefit the environment. Boston campus transportation options include walking, biking, public transportation, electric vehicles, and carpooling. Northeastern encourages alternative modes of transportation for convenient, healthy ways to lessen the environmental impact.
+    <span id="moreContent7" style="display: none;"> <br> Northeastern University just took another step in establishing a pathway toward a more sustainable future, and facilities management at Northeastern is helping to pave that road. With the sole goal of accelerating the electrification of transportation within the city of Boston and beyond, Northeastern is determined to maintain its rank as one of the leading organizations in promoting energy advancement throughout the Commonwealth of Massachusetts. </span></p>
+        <button id="readMoreBtn7"  class="readMoreBtn" onclick="toggleReadMore('moreContent7', 'readMoreBtn7')">Read More</button>
 </div>
 
 <div class="right-grid">
     <img src="image/main image.jpeg" alt="NEU Logo" style="max-width: 90%;">
     <div class="caption">
-        <p style="color:8F8F8F;">Ride and Drive for a Sustainable Future | Location: Mathews Arena</p>   
+        <p style="font-size: 14px;">Ride and Drive for a Sustainable Future | Location: Mathews Arena</p>   
     </div>
 </div>
 </div>
@@ -407,7 +481,7 @@
 <div class="dani">
     <div class="DYK"
     <div class="left-grid" style="margin-right: 0px; text-align: left;">
-        <img src="image/did_you_know@300x.png" alt="NEU Logo" style="max-width: 70%"" position=absolute; top= -20px; left= -20px;">
+        <img src="image/did_you_know@300x.png" alt="NEU Logo" style="max-width: 70%" position=absolute; top= -20px; left= -20px;">
         <img src="image/blue bikes image.jpeg" alt="NEU Logo">
         <div class="caption">
             <p style="margin-top: 10px;">Bluebikes is like having your own personal fleet of more than 4,000 bikes and 400 stations at your disposal? It's not just a mode of public transportation; it's a fast, fun, and affordable way to navigate Metro Boston!</p>   
@@ -425,13 +499,16 @@
 <div class="neu_ghg">
     <div class="left-grid">
         <h3>Blue Bike riders from 2011 to 2012</h3>
-        <p>Utilizing blue bikes is environmentally beneficial as it eliminates CO2 emissions. By opting for this sustainable mode of transportation, individuals contribute to a cleaner atmosphere, mitigating the environmental impact associated with traditional fossil fuel-powered vehicles and fostering a healthier, more eco-friendly urban environment.<br><br>The visualization (area graph) provides an overview of the use of Blue Bikes since 2011-2022. From the data, we can understand the trends, and growth of blue bikes system from the year 2011 to 2022.<br><br>Increasing the utilization of blue bikes is advantageous and contributes to sustainability.</p>
-    </div>
+        <p> Utilizing blue bikes is environmentally beneficial as it eliminates CO2 emissions. By opting for this sustainable mode of transportation, individuals contribute to a cleaner atmosphere, mitigating the environmental impact associated with traditional fossil fuel-powered vehicles and fostering a healthier, more eco-friendly urban environment.
+        <span id="moreContent8" style="display: none;"> <br> The visualization (area graph) provides an overview of the use of Blue Bikes since 2011-2022. From the data, we can understand the trends, and growth of blue bikes system from the year 2011 to 2022.
+            <br>Increasing the utilization of blue bikes is advantageous and contributes to sustainability. </span> </p>
+                <button id="readMoreBtn8"  class="readMoreBtn" onclick="toggleReadMore('moreContent8', 'readMoreBtn8')">Read More</button>
+        </div>
     
     <div class="right-grid">
         <img src="image/B_bike.png" alt="NEU Boston campus GHG" style="max-width: 100%;">
         <div class="caption">
-            <p style="color:8F8F8F;">Blue Bike riders from 2011 to 2012</p>
+            <p style="font-size:14px">Blue Bike riders from 2011 to 2012</p>
             <a href="https://datawrapper.dwcdn.net/8CE1d/1/">Click here to view the interactive visualization</a>    
         </div>
     </div>
@@ -456,13 +533,16 @@
 <div class="neu_ghg">
     <div class="left-grid">
         <h3>EV Charging at Northeastern</h3>
-        <p>Northeastern has 32 charging stations available to faculty, students, staff, and visitors in the Columbus, Renaissance Park, and Gainsborough garages. Visitors generally use Renaissance Park or the Gainsborough garages.<br><br>The bar graph provides a comphrehensive overview of the key metrics related to the University's EV charging facilities from January 2022 to August 2023.<br<br>Delving into the data, we explore crucial parameters such as the number of charging ports available, the frequency of charging sessions, as well as the energy consumption and accumulation trends during this period.<br><br>This visualization helps us understand Northeastern University's sustainable transportation over time.</p>
+        <p> Northeastern has 32 charging stations available to faculty, students, staff, and visitors in the Columbus, Renaissance Park, and Gainsborough garages. Visitors generally use Renaissance Park or the Gainsborough garages.
+        <span id="moreContent9" style="display: none;"> <br> The bar graph provides a comphrehensive overview of the key metrics related to the University's EV charging facilities from January 2022 to August 2023.Delving into the data, we explore crucial parameters such as the number of charging ports available, the frequency of charging sessions, as well as the energy consumption and accumulation trends during this period.</span> </p>
+                    <button id="readMoreBtn9"  class="readMoreBtn" onclick="toggleReadMore('moreContent9', 'readMoreBtn9')">Read More</button>
+    
     </div>
     
     <div class="right-grid">
         <img src="image/EV Neu UPDATED.jpeg" alt="NEU Boston campus GHG" style="max-width: 100%;">
         <div class="caption">
-            <p style="color:8F8F8F;">EV Charging at Northeastern University</p>   
+            <p style="font-size: 14px;">EV Charging at Northeastern University</p>   
         </div>
     </div>
 </div>
