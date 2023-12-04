@@ -15,7 +15,41 @@
             margin: px;
             padding: 0; 
         }
-
+        header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            background-color: #E7E8D1;
+            color: #333;
+            text-align: center;
+            padding: 10px 0;
+            z-index: 1000;
+        }
+        nav a {
+            font-family: 'Lato', sans-serif;
+            font-style: normal;
+            font-size: 17px;
+            color: #b85042;
+            padding: 10px 20px;
+            text-decoration: none;
+            display: inline-block;
+        }
+        a {
+    color: #333;
+    text-decoration: none;
+}
+a:hover {
+    color: #333;
+    text-decoration: underline;
+}
+a:visited {
+    color: #333; /* Change this to the color you want for visited links */
+}
+        html {
+            scroll-behavior: smooth;
+        }
+ 
         .link {
             background-color: #b85042; /* The background color section extending from the link to the paragraph - We're thrilled to have... */
             padding: 20px;
@@ -41,12 +75,6 @@
             padding: 100px; 
         }
 
-        }
-
-        .boston {
-            background-color: #b85042;
-            padding: 50px 120px 50px 120px;
-            margin: 0px 0px 0px 0px;
         }
 
         /* Centered content wrapper */
@@ -100,7 +128,7 @@
             margin: 110px;
             display: grid;
             grid-template-columns: 1.5fr 1fr;
-            gap: 20px; 
+            gap: 80px; 
         }
 
 
@@ -122,7 +150,7 @@
             margin: 110px;
             display: grid;
             grid-template-columns: 1fr 1fr;
-            gap: 60px; 
+            gap: 80px; 
         }
 
         .aj_1{
@@ -201,6 +229,38 @@
             outline: none;            /* Remove the focus outline */
             box-shadow: none;         /* Remove any shadow effect */
         }
+        .site-footer {
+    background-color: #b85042;
+    margin: 110px;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footer-nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-nav ul li {
+    display: inline-block;
+    margin-right: 20px;
+}
+
+.footer-nav ul li:last-child {
+    margin-right: 0;
+}
+
+.footer-nav ul li a {
+    color: #fff;
+    text-decoration: none;
+}
 
 
         
@@ -225,14 +285,16 @@
 
 
     </script>
-
-    <div class="link">
+    <header>
         <nav>
-            <a href="info.html">Info</a> |
-            <a href="/css/">Link 2</a> |
-            <a href="/js/">Link 3</a> |
-            <a href="/jquery/">Link 4</a>
+            <a href="#welcome">Boston Overview</a>
+            <a href="#footprint">NU Footprint</a>
+            <a href="#Matter">Energy Consumption</a>
+            <a href="#Transportation">Transportation</a>
         </nav>
+    </header>
+    <section id="welcome">
+    <div class="link">
     
 
         <div class="intro">
@@ -248,17 +310,12 @@
                     <p style="margin-top: 60px;">We're thrilled to have you join us on this exciting journey. Boston is not only a city steeped in history but also a place deeply committed to sustainability. Here at Northeastern, sustainability is more than a concept; it's a way of life. From eco-friendly campus initiatives to green clubs and daily sustainable habits, you'll find plenty of opportunities to be part of our commitment to a greener future. Welcome to a university where your education includes making a positive impact on the world around you.</p>
                 </div>
             </div>
+            
         </div>
-        
-        
-        
+            <img src="image/WhatsApp Image 2023-12-02 at 7.54.15 PM.jpeg" alt="Boston City" style=" padding:0px;max-width: 100%; margin: 0px;"> 
     </div>
 </div>
 
-<!-- PATRICIA-->
-<div class = "boston">
-<img src="image/WhatsApp Image 2023-12-02 at 7.54.15 PM.jpeg" alt="Boston City" style=" padding:0px;max-width: 100%; margin: 0px; border: 15px solid #E7E8D1; border-radius: 10px;">
-</div>
 
 <!-- PATRICIA-->
 <div class = "dani">
@@ -300,8 +357,24 @@
     </div>
 </div>
 
-<!-- DECODING NORTHEASTERN'S FOOTPRINT-->
+<div class = "dani">
+    <div class="left-grid">
+        <h3>Boston and Northeastern Population Annual Percent Change</h3>
+        <p>Over the past eight years, the annual changes in undergraduate and graduate enrollment, along with the population growth in Boston, have painted an interesting picture. In terms of undergraduate enrollment, there has been a consistent but somewhat modest increase for both men and women, with men seeing a slightly higher percentage change. Graduate enrollment, on the other hand, has been more volatile, with significant fluctuations in both men and women categories.</span> </p>
+          <span id="moreContent11" style="display: none;"> <br> Notably, 2021 marked a remarkable surge in graduate women enrollment, with a staggering 72.77% increase. Meanwhile, the Boston population has been steadily growing at a relatively stable rate. These data points reflect the dynamic nature of education and population trends in Boston over this period, with potential implications for the city's academic institutions and social landscape.</span> </p>
+            <button id="readMoreBtn11"  class="readMoreBtn" onclick="toggleReadMore('moreContent11', 'readMoreBtn11')">Read More</button>
+        </div>
 
+    <div class="right-grid">
+        <img src="image/pop_change_4@300x.png" alt="NEU Logo" style="max-width: 100%;">
+        <div class="caption">
+            <p style="margin-top: 10px; color:8F8F8F;"> Northeastern Population Annual Percent Change</p> 
+        </div>
+    </div>
+</div>
+</section>
+<!-- DECODING NORTHEASTERN'S FOOTPRINT-->
+<section id="footprint"></section>
 <div class = "matters">
     <div class = "why">
         <div class="left-grid">
@@ -384,9 +457,9 @@
             <button id="readMoreBtn5"  class="readMoreBtn" onclick="toggleReadMore('moreContent5', 'readMoreBtn5')">Read More</button>
     </div>
 </div>
-
+</section>
 <!-- Why does this matter-->
-
+<section id="Matter">
 <div class = "matters">
     <div class = "why">
         <div class="left-grid">
@@ -406,36 +479,36 @@
     <p style="margin-left: 110px; margin-right: 110px; margin-bottom: 0px;">These datasets, one for campus-wide emissions and energy and the other for real estate-related emissions and energy use at Northeastern University, provide critical insights. Notably, while both datasets show increased energy consumption over time, the campus-wide emissions dataset exhibits fluctuating emissions levels, indicating additional influencing factors. In contrast, the real estate-related emissions data follows a more consistent trend, suggesting a direct link between energy usage and emissions in this context. These findings enable students to delve into the complexities of sustainability efforts on campus, guiding initiatives to reduce emissions and improve energy efficiency.</p>
 
     <!-- PATRICIA Annual Change in Emissions - 2 scatter plots-->
-<div class="fuel" style="margin-top: 200px;"> 
+<div class="fuel" > 
     <div class="left-grid">
-        <img src="image/Campus_Emissions_vs_Inventory2@300x.png" alt="NEU Logo" style = "margin-right: 0; margin-left: 0; margin-top: -130; max-width: 110%;">
-        <p style="font-size: 14px;">Northeastern Campus GHG Emissions</p>
+        <img src="image/Campus_Em_vs_inv_perc_change_1@300x.png" alt="NEU Logo" style = "margin-right: 0; margin-left: 0; max-width: 110%;">
+        <p class="image-caption" style="font-size: 13px; color:8F8F8F; margin-left: 30; margin-top: 0;">Northeastern Campus GHG Emissions</p>
     </div>
 
     <div class="right-grid"> 
-        <img src="image/RealEstate_Emissions_vs_Inventory2@300x.png" alt="NEU Logo" style = "margin-left: 0; margin-top: -130; max-width: 110%;">
-        <p style="font-size: 14px; margin-left: 40px;">Northeastern's Real Estate GHG Emissions</p>
+        <img src="image/RealEs_Em_vs_inv_perc_change_1@300x.png" alt="NEU Logo" style = "margin-left: 0; max-width: 110%;">
+        <p class="image-caption" style="font-size: 13px; color:8F8F8F; margin-left: -30; margin-top: 0;">Northeastern's Real Estate GHG Emissions</p>
     </div>
 </div>
 
 
 <div class = "dani_2">
     <div class="left-grid">
-        <img src="image/NEU_energy_comp@300x.png" alt="NEU Logo" style="max-width: 100%;">
+        <img src="image/NEU_energy_comp2@300x.png" alt="NEU Logo" style="max-width: 100%;">
     </div>
 
     <div class="right-grid">
         <h3> Northeastern's Fuel Consumption</h3>
-        <p>In a world increasingly concerned with the ecological footprint of our energy choices, the spotlight falls on the different energy sources that power institutions like Northeastern University.
-        <span id="moreContent6" style="display: none;"> <br> Gasoline, diesel, and electricity are the pillars of energy consumption, but they come with varying degrees of environmental impact. Gasoline's volatility and its association with air pollution and climate change have raised alarms. Diesel's fluctuating usage has prompted questions about its sustainability and emissions. <br> On the brighter side, electricity's steady growth represents a beacon of cleaner energy hope. As we delve into Northeastern University's consumption trends over the past decade, we find insights that reflect a broader global trend toward more sustainable energy sources, holding significant relevance for informed policymaking. </span></p>
-            <button id="readMoreBtn6"  class="readMoreBtn" onclick="toggleReadMore('moreContent6', 'readMoreBtn6')">Read More</button>
+        <p>In a world increasingly concerned with the ecological footprint of our energy choices, the spotlight falls on the different energy sources that power institutions like Northeastern University. 
+           <span id="moreContent12" style="display: none;"> <br> Gasoline, diesel, and electricity are the pillars of energy consumption, but they come with varying degrees of environmental impact. Gasoline's volatility and its association with air pollution and climate change have raised alarms. Diesel's fluctuating usage has prompted questions about its sustainability and emissions. On the brighter side, electricity's steady growth represents a beacon of cleaner energy hope. As we delve into Northeastern University's consumption trends over the past decade, we find insights that reflect a broader global trend toward more sustainable energy sources, holding significant relevance for informed policymaking. </span></p>
+              <button id="readMoreBtn12"  class="readMoreBtn" onclick="toggleReadMore('moreContent12', 'readMoreBtn12')">Read More</button>    
     </div>
 </div>
-
+</section>
 
 
 <!-- Role of transportation in the green revolution-->
-
+<section id="Transportation">
 <div class = "matters">
     <div class = "why">
         <div class="left-grid">
@@ -491,7 +564,7 @@
 
 <div class="neu_ghg">
     <div class="left-grid">
-        <h3>Blue Bike riders from 2011 to 2012</h3>
+        <h3>Blue Bike riders from 2011 to 2022</h3>
         <p> Utilizing blue bikes is environmentally beneficial as it eliminates CO2 emissions. By opting for this sustainable mode of transportation, individuals contribute to a cleaner atmosphere, mitigating the environmental impact associated with traditional fossil fuel-powered vehicles and fostering a healthier, more eco-friendly urban environment.
         <span id="moreContent8" style="display: none;"> <br> The visualization (area graph) provides an overview of the use of Blue Bikes since 2011-2022. From the data, we can understand the trends, and growth of blue bikes system from the year 2011 to 2022.
             <br>Increasing the utilization of blue bikes is advantageous and contributes to sustainability. </span> </p>
@@ -499,10 +572,8 @@
         </div>
     
     <div class="right-grid">
-        <img src="image/B_bike.png" alt="NEU Boston campus GHG" style="max-width: 100%;">
-        <div class="caption">
-            <p style="font-size:14px">Blue Bike riders from 2011 to 2012</p>
-            <a href="https://datawrapper.dwcdn.net/8CE1d/1/">Click here to view the interactive visualization</a>    
+        <iframe title="Blue Bikes riders since the 2011-2022" aria-label="Interactive area chart" id="datawrapper-chart-8CE1d" src="https://datawrapper.dwcdn.net/8CE1d/1/" scrolling="no" frameborder="0" style="border: none;" width="600" height="400" data-external="1"></iframe>        <div class="caption">
+            <p style="font-size:14px">Blue Bike riders from 2011 to 2022</p>
         </div>
     </div>
 </div>
@@ -539,7 +610,39 @@
     </div>
 </div>
 
+<!-- Conclusion-->
+
+<div class = "matters">
+    <div class = "why">
+        <div class="left-grid">
+        <h3> Decoding Northeastern's Footprint</h3>
+        <p>
+            Decoding Northeastern University's carbon emissions and energy usage provides valuable insights into the institution's sustainability efforts. Northeastern has made significant progress in these areas, aligning with its commitment to reducing its environmental impact.
+            <br> <br><strong>1. Carbon Emissions Reduction:</strong> Northeastern is actively working to decode its emissions sources by focusing on energy-efficient buildings, harnessing renewable energy sources, and promoting sustainable transportation options.
+            <br> <strong>2. Energy Usage Analysis:</strong> The university diligently monitors and analyzes energy usage within its buildings, encouraging energy-efficient practices, making data-driven decisions, and fostering research and innovation.
+        </p>
+                </div>
+    
+        <div class="right-grid">
+            <img src="image/power_supply@300x.png" alt="NEU Logo" style="max-width: 130%;">
+        </div>
+        </div>
+    </div>
+</section>
 </div>
+<footer class="site-footer">
+    <div class="footer-content">
+        <p>&copy; 2023 Sustainability for Incoming Students</p>
+        <nav class="footer-nav">
+            <ul>
+                <li><a href="#">Privacy Policy</a></li>
+                <li><a href="#">Terms of Service</a></li>
+                <li><a href="#">Contact Us</a></li>
+            </ul>
+        </nav>
+    </div>
+</footer>
+
 
 <!-- MIHIR'S SECTION ENDS HERE-->
 
